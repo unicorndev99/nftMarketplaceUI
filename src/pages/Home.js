@@ -921,8 +921,36 @@ export default function Home() {
                     </>
                 )
             }
-        
+        </div>
+        <footer>
+            <div className='w-full h-[400px] footer'>
+                <div className='grid grid-cols-5 text-white pt-20 pl-32'>
+                    <div className='cols-span-1'></div>
+                    <div className='cols-span-1 grid grid-rows-2 h-20'>
+                        <p className='text-[18px] font-bold'>Marketplace</p>
+                        <p className=''>Meet various NFT.</p>
+                    </div>
+                    <div className='cols-span-1 grid grid-rows-5 h-48'>
+                        <p className='text-[18px] font-bold'>Quick Links</p>
+                        <p className=''>WalletInfo</p>
+                        <p className=''>NFT Mint</p>
+                        <p className=''>NFT SellList</p>
+                        <p className=''>NFT RegSell</p>
+                    </div>
+                    <div className='cols-span-1 grid grid-rows-8 h-72'>
+                        <p className='text-[18px] font-bold'>Represent</p>
+                        <p className=''>David</p>
+                        <p className='text-[18px] font-bold'>BusinessNumber</p>
+                        <p className=''>107-97-7333</p>
+                        <p className='text-[18px] font-bold'>FAX</p>
+                        <p className=''>02-6499-4123</p>
+                        <p className='text-[18px] font-bold'>Address</p>
+                        <p className=''>uISEurse qeurqwer akeurwer6 33</p>
+                    </div>
+                    <div className='cols-span-1'></div>
+                </div>
             </div>
+        </footer>
       </div>
     );
 }

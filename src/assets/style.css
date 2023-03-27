@@ -20,6 +20,10 @@
   text-align: right;
   color: black;
 }
+
+.footer {
+  background: linear-gradient(0deg, rgba(0,63,147) 0%, rgb(25, 5, 97) 70%);
+}
 /* ////////  file-style ///// */
 .constelacao {
     position: absolute;
