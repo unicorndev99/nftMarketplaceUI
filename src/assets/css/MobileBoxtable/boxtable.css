@@ -1,0 +1,34 @@
+.boxtable {
+    width: 100%;
+}
+.boxtable div.up {
+    background-image: url("images/up_arrow.png");
+}
+.boxtable div.down {
+    background-image: url("images/down_arrow.png");
+}
+.boxtable div.default {
+    background-image: url("images/default.png");
+}
+div.up,
+div.default,
+div.down {
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+.mobile-boxtable-header {
+    display: flex;
+    margin-bottom: 10px;
+    padding: 0 8px;
+}
+
+.mobile-boxtable-header div {
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 12px;
+    /*color: grey;*/
+    padding: 10px 20px 10px 5px;
+    z-index: 20;
+}

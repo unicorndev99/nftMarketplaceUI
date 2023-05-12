@@ -1,0 +1,331 @@
+.user-info-pane {
+    background-color: #093f93;
+    display: flex;
+    justify-content: center;
+}
+
+.user-info-pane-body {
+    width: 1012px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-info-pane-left-logo {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background-color: #093f93;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-info-pane-left-logo img {
+    width: 50px;
+    height: 70px;
+}
+
+.user-info-label-width {
+    width: 80px;
+    font-weight: bold;
+    font-size: 15px;
+}
+.user-info-label-exp {
+    color: #093f93;
+    font-size: 13px;
+}
+
+.user-info-pane-left {
+    background-color: white;
+    padding: 4px;
+    padding-right: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.user-info-method-logo-cross {
+    height: 40px;
+    width: 35px;
+}
+
+.user-info-method-logo {
+    width: 70px;
+    height: 60px;
+    margin-top: 7px;
+}
+
+.user-info-method-title {
+    font-size: 80px;
+    letter-spacing: 3px;
+    /*color: #000;*/
+    color: #11204b;
+    font-weight: bold;
+    margin-right: 30px;
+}
+
+.user-info-method-meta-title {
+    font-size: 55px;
+    letter-spacing: 3px;
+    /*color: #000;*/
+    color: #11204b;
+    font-weight: bold;
+}
+
+.tab-panel {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+tr {
+    border-bottom: 1px solid #d3ddef;
+}
+th, td {
+    text-align: center;
+    padding: 8px;
+    vertical-align: middle !important;
+    color: #6e6f71;
+    font-weight: bold;
+    /*color: grey;*/
+}
+
+/*tr:nth-child(even){background-color: #f2f2f2}*/
+
+th {
+    background-color: #f5f8ff;
+    /*font-size: 13px;*/
+    border-top: none !important;
+    border-bottom: none !important;
+    /*color: white;*/
+}
+
+td {
+    /*border-bottom: 1px solid lightgrey;*/
+}
+
+.wallet-info-pane {
+    width: 1012px;
+}
+
+.nav-tabs-pane {
+    padding: 0 25px;
+}
+.nav-tabs-pane:hover {
+    color: #093f93;
+    /*border-bottom: 5px solid #093f93;*/
+}
+
+.nav-tabs_active {
+    color: #093f93;
+    border-bottom: 5px solid #093f93;
+}
+
+.tab-content {
+    margin-top: -5px;
+}
+
+.edit_button {
+    padding: 7px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #064092;
+}
+
+.edit_button:hover {
+    color: white;
+    background-color: #064092;
+}
+.edit_button_active {
+    color: white;
+    background-color: #064092;
+}
+
+.content_img {
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+}
+
+.modal-content {
+    border-radius: 1.1rem;
+}
+
+.modal_button, .modal_button:hover{
+    border: none;
+    background-image: linear-gradient(#083f92,#2a5198) !important;
+    font-size: 14px;
+    margin-left: 15px;
+    cursor: pointer;
+    /* padding: 5px 20px; */
+    /* border-radius: 20px; */
+    color: white;
+    font-weight: bold;
+    width: 95px;
+}
+
+.modal_info_header {
+    background-color: #f5f8ff;
+    /*background-color: lightgrey;*/
+    border-top: 1px solid lightgrey;
+    /*border-top: 1px solid #ced8e8;*/
+    border-bottom: 1px solid lightgrey;
+    /*border-bottom: 1px solid #ced8e8;*/
+    font-size: 13px;
+}
+.modad_info_color_f5f8ff {
+    background-color: #f5f8ff;
+}
+.modal_info_body {
+    /*border-bottom: 1px solid #ced8e8;*/
+    border-bottom: 1px solid lightgrey;
+    font-size: 13px;
+}
+
+.modal_info_body_border_right {
+    /*border-right: 1px solid #ced8e8;*/
+    border-right: 1px solid lightgrey;
+}
+
+.modal_button_primary {
+    background-image: linear-gradient(#213b6e, #305694) !important;
+}
+
+.modal_button_close, .modal_button_close:hover {
+    background-image: linear-gradient(#ff9306, #ff9306) !important;
+}
+
+
+.text_underLine {
+    text-decoration: underline;
+    text-underline: #747474;
+    font-size: 13px;
+}
+
+.NFTUpdateModalImageDiv {
+    border: 1px solid #e7e7e7;
+    border-radius: 10px;
+    /* height: 300px; */
+}
+
+.NFTGenerateListUpdateImgDiv {
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
+}
+
+.NFTupdateModalImg {
+    width: 30%;
+    height: 180px;
+    border-radius: 12px;
+}
+
+.pc-update-img {
+    display: flex;
+    justify-content: center;
+    /* border-top: 6px solid grey; */
+    border-radius: 20px;
+    width: 50%;
+    height: 180px;
+}
+
+.pc-update-img img {
+    border-radius: 20px;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    width: 100%;
+}
+
+.upload_icon {
+    width: 65px;
+    height: 65px;
+}
+.mobile_upload_icon {
+    width: 45px;
+    height: 45px;
+}
+
+.form-control-input {
+    background-color: #f5f9ff !important;
+    border: 1px solid lightgrey !important;
+    border-radius: 3px !important;
+}
+.search-input {
+    background-color: #f5f9ff !important;
+    border: 1px solid lightgrey !important;
+    border-radius: 3px !important;
+    width: 250px;
+    padding-left: 10px !important;
+    font-size: 13px !important;
+    margin-bottom: 2px !important;
+}
+
+.history_text {
+    border-bottom: 4px solid #083f92;
+    width: 70px;
+    padding-left: 5px;
+}
+
+.img-pane {
+    padding: 0;
+    border: 1px solid lightgrey;
+    /*padding-top: 1px;*/
+    border-radius: 15px;
+    border-top: 5px solid grey;
+    /*height: 200px;*/
+}
+
+
+.updateModalImg {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    /*height: 150px;*/
+}
+
+.modal-header-text {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.search-input-header {
+    padding: 9px 0 8px 9px;
+    background: #f5f9ff;
+    min-width: 30px;
+    text-align: center;
+    font-size: 15px;
+    border: 1px solid #dcdee1;
+    border-right: none;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    color: #565656;
+    height: 32px;
+}
+
+.search-input-body {
+    background-color: #f5f9ff !important;
+    border: 1px solid #dcdee1 !important;
+    border-left: none !important;
+    border-radius: 8px !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    font-size: 13px !important;
+    padding: 10px 5px !important;
+    width: 220px;
+    height: 32px;
+}
+
+.search-input-body:focus {
+    box-shadow: none !important;
+}
+
+.price-input-text {
+    padding: 9px 15px;
+    height: 40px;
+}

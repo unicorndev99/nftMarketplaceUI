@@ -1,0 +1,39 @@
+.container-custom {
+    padding: 120px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.main-container .login {
+    border: 1px solid #e8e8e8;
+    border-radius: 15px;
+    padding: 80px 150px;
+    box-shadow: 0 1px 1px lightgrey;
+}
+
+.main-container .login .login_btn {
+    padding: 12px 50px;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+    width: 320px;
+}
+
+.login_logo {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+}
+
+.main-container .login p {
+    font-size: 15px;
+}
+
+.login_btn_one {
+    background-color: #3366ff !important;
+}
+.login_btn_two {
+    background-color: #e27625 !important;
+}

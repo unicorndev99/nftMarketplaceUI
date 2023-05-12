@@ -1,0 +1,89 @@
+.viewButton {
+    padding: 7px 15px;
+    border-radius: 5px;
+    width: 122px;
+    font-size: 15px;
+    font-weight: bold;
+    border: 1px solid lightgrey;
+}
+
+.viewButtonActive {
+    background-color: #083f92;
+    color: white;
+    border: 1px solid #083f92;
+}
+.viewButton:hover {
+    background-color: #083f92;
+    color: white;
+    border: 1px solid #083f92;
+}
+
+.dashboard-item {
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+}
+
+.dashboard-item-image {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    height: 155px;
+}
+
+.w-49 {
+    width: 48.9%;
+}
+
+.login_modal {
+    background-color: #083f92;
+}
+
+.loginButton {
+    padding: 11px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.mobileLoginIcon {
+    color: white;
+    background-color: #0f3671;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    padding: 13px;
+}
+
+.mobile_dashboard_detail_buttonGroup {
+    padding-right: 50px;
+    margin-bottom: 30px;
+}
+
+.mobile_dashboard_detail_img {
+    width: 60%;
+    border-top: 6px solid grey;
+    border-radius: 20px;
+}
+
+.mobile_dashboard_detail_img_logo {
+    border-radius: 20px;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    width: 100%;
+}
+
+.w-35 {
+    width: 33%;
+}
+
+.w-15 {
+    width: 17%;
+}
+
+.NftCard-text-pane {
+    padding: 13px 11px;
+    font-size: 13px;
+}

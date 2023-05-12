@@ -1,0 +1,13 @@
+.mobile_login_btn {
+    padding: 8px 50px !important;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    width: 320px;
+}
+
+.mobile_login_logo {
+    margin-right: 15px;
+}
+

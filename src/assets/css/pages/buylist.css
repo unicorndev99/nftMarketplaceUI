@@ -1,0 +1,39 @@
+.modal_backgroundColor {
+    background-color: #083f92;
+}
+
+.mainicon {
+    padding: 17px;
+    color: white;
+    background-color: #103572;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 17px;
+}
+
+.buyButton {
+    border-radius: 15px;
+    padding: 12px;
+    background-color: white;
+    width: 100%;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.NftCard-pane {
+    width: 1100px;
+}
+
+.NftCard {
+    /*padding: 0;*/
+    float: left;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.NftCard img {
+    height: 200px;
+    border-radius: 13px;
+}
