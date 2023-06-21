@@ -11,7 +11,6 @@ const NFTHistoryDetail = (props) => {
     const [boughtHistory, setBoughtHistory] = useState(null);
 
     useEffect(() => {
-        console.log("new", nftInfo)
         if(nftInfo) {
             getBoughtHistoryData(nftInfo.id, nftInfo.walletType).then(data => {
                 const historyData = data.map(({ PriceTrading, oldWalletAddress, newWalletAddress, createdAt }) => ({
@@ -25,26 +24,6 @@ const NFTHistoryDetail = (props) => {
             
         }
     },[nftInfo])
-
-    // const linkPage = (pageRouter, data) => {
-    //     history.push({
-    //         pathname: pageRouter,
-    //         nftInfo : data
-    //     });
-    // }
-
-    // const stopSaleNFT = (nftID) => {
-    //     console.log("int ehfrist", wallet, connectedWalletType)
-    //     stopForsaleNFT(nftID).then(data => {
-    //         if(data) {
-    //             alert("stop Success");
-
-    //             props.getRefreshData(wallet, connectedWalletType)
-    //         } else {
-
-    //         }
-    //     })
-    // }
 
     return (
         nftInfo &&

@@ -17,7 +17,6 @@ const Login = (props) => {
                     method: "eth_requestAccounts",        
                 });
                 const balance = await getWalletBalance(accounts[0], walletType)
-                console.log("metamask b", balance)
     
                 setConnectedWalletType(walletType)
                 setWalletAddress(accounts[0])
@@ -30,10 +29,8 @@ const Login = (props) => {
                 window.open('https://chrome.google.com/webstore/detail/kaikas/jblndlipeogpafnldhgmapagcccfchpi?hl=en', '_blank')
             } else {
                 if (typeof window.klaytn !== 'undefined') {
-                    console.log("It's in-app browser");
                     const accounts = await window.klaytn.enable();
                     const balance = await getWalletBalance(accounts[0], walletType)
-                    console.log("kaikas b", balance)
                     setConnectedWalletType(walletType)
                     setWalletAddress(accounts[0])
                     setWalletBalance(balance);

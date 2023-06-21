@@ -98,7 +98,6 @@ class NFTGenerate extends Component {
         
         /// will upload template image for video NFT
         let mediaIpfs = await saveFileToPinata(blob, "EscareNFT_media_"+ Date.now() + "_" + this.state.fileType) //res.IpfsHash
-        console.log("Res", mediaIpfs)
         if(this.state.fileType === "Image") {
             metadata = {
                 name: "EscareN2EToken",
@@ -132,7 +131,6 @@ class NFTGenerate extends Component {
         )
         const metadataIpfs = metaDataHash.IpfsHash // sample video https://ipfs.io/ipfs/QmSYYPBNhYCLbDHDTmjbn4VXoVPg3Mfi4cmDFBEuPbJ3N7
             
-        console.log("before mint", metadataIpfs, wallet, connectedWalletType)
         let resMint = await mintNFT(metadataIpfs, wallet, connectedWalletType);
         if(resMint) {
             const { txHash, tokenId } = resMint

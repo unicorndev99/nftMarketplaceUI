@@ -4,7 +4,6 @@ import { title } from "../../services/title";
 class SearchBox extends Component {
     constructor(props) {
         super(props);
-        console.log("hths", props)
         this.state = {
             searchNFTName : null
         }

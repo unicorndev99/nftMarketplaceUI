@@ -18,7 +18,6 @@ const BuylistDetail = (props) => {
     const [transacting, setTransacting] = useState(false)
 
     useEffect(() => {
-        console.log("new", nftInfo)
         if(nftInfo) {
             getBoughtHistoryData(nftInfo.id, nftInfo.mintedWalletType).then(data => {
                 const historyData = data.map(({ PriceTrading, oldWalletAddress, newWalletAddress, createdAt }) => ({
@@ -65,7 +64,6 @@ const BuylistDetail = (props) => {
     }
 
     const onFilterByName = (name) => {
-        console.log("name", name)
     }
 
     return (

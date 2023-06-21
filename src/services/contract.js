@@ -536,7 +536,6 @@ export const ethContractAbi = [
 
 export const mintNFT = async (tokenURI, walletAddress, walletType) => {
     const nftContract = await getContract(walletType);
-    console.log("contract", nftContract, tokenURI)
     if(walletType === "metamask") {
         ///////////////////// NFT minting //////////////////////
             // const chainId = 5 // 1: ethereum mainnet, 4: rinkeby 137: polygon mainnet 5: // Goerli testnet
@@ -555,10 +554,8 @@ export const mintNFT = async (tokenURI, walletAddress, walletType) => {
             try {
                 const tx = await nftContract.safeMint(tokenURI);
                 let res = await tx.wait()
-                console.log("metamask tx", res)
                 if (res.transactionHash) {
                     let tokenId = Number.parseInt(res.events[0].args.tokenId)
-                    console.log("tokenId", tokenId)
                     return {
                         txHash: res.transactionHash,
                         tokenId
@@ -570,7 +567,6 @@ export const mintNFT = async (tokenURI, walletAddress, walletType) => {
         
     } else if(walletType === "kaikas") {
         const tx = await nftContract.methods.safeMint(tokenURI).send({from: walletAddress, gas: "50000000"});
-        console.log("kaikas tx", tx)
         if (!tx.txError) {
             let tokenId = Number.parseInt(tx.events.Transfer.returnValues.tokenId)
             return {
@@ -585,7 +581,6 @@ export const mintNFT = async (tokenURI, walletAddress, walletType) => {
 
 export const sellListNFT = async (tokenId, listPrice, walletAddress, walletType ) => {
     const nftContract = await getContract(walletType);
-    console.log("setList",tokenId, listPrice, walletAddress, walletType, nftContract)
 
     if(walletType === "metamask") {
             try {
@@ -595,13 +590,35 @@ export const sellListNFT = async (tokenId, listPrice, walletAddress, walletType 
                     return true;
                 }
             } catch (error) {
-                console.log("error", error)
                 return false;
             }
         
     } else if(walletType === "kaikas") {
         const tx = await nftContract.methods.allowBuy(tokenId, BigNumber.from(1e9).mul(listPrice * 1000000000)).send({from: walletAddress, gas: "50000000"});
-        console.log("kaikas tx", tx)
+        if (!tx.txError) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
+export const disableListNFT = async (tokenId, walletAddress, walletType ) => {
+    const nftContract = await getContract(walletType);
+
+    if(walletType === "metamask") {
+            try {
+                const tx = await nftContract.disallowBuy(tokenId);
+                let res = await tx.wait()
+                if (res.transactionHash) {
+                    return true;
+                }
+            } catch (error) {
+                return false;
+            }
+        
+    } else if(walletType === "kaikas") {
+        const tx = await nftContract.methods.disallowBuy(tokenId).send({from: walletAddress, gas: "50000000"});
         if (!tx.txError) {
             return true;
         } else {
@@ -612,7 +629,6 @@ export const sellListNFT = async (tokenId, listPrice, walletAddress, walletType 
 
 export const buyNFT = async (tokenId, listPrice, walletAddress, walletType ) => {
     const nftContract = await getContract(walletType);
-    console.log("setList",tokenId, listPrice, walletAddress, walletType, nftContract)
 
     if(walletType === "metamask") {
             try {
@@ -624,14 +640,12 @@ export const buyNFT = async (tokenId, listPrice, walletAddress, walletType ) => 
                     };
                 }
             } catch (error) {
-                console.log("error", error)
                 return false;
             }
         
     } else if(walletType === "kaikas") {
         // const tx = await nftContract.methods.allowBuy(tokenId).send({from: walletAddress, gas: "50000000", value: BigNumber.from(1e9).mul(listPrice * 1000000000)});
         const tx = await nftContract.methods.buy(tokenId).send({from: walletAddress, gas: "50000000", value: new caver.utils.toPeb(listPrice, 'KLAY')});
-        console.log("kaikas tx", tx)
         if (!tx.txError) {
             return {
                 txHash: tx.transactionHash,

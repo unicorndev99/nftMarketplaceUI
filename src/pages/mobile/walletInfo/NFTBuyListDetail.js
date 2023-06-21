@@ -10,7 +10,6 @@ class NFTBuyListDetail extends Component {
     constructor(props) {
         super(props);
         const nftInfo = props.location.nftInfo
-        console.log("nftINfo", nftInfo)
         this.state = {
             ...nftInfo,
             historyTableHeader : [

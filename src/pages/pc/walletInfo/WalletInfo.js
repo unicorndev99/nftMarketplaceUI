@@ -111,7 +111,6 @@ class WalletInfo extends Component {
     }
 
     getAllNFTsData(wallet, connectedWalletType) {
-        console.log("address", wallet, connectedWalletType)
         getNFTsWithAccount(wallet, connectedWalletType).then(({nftData, historyData}) => {      
             let mintData = [], saleData = [], buyData = [], historyListData = [];
             nftData.map(({ createdAt, updatedAt, description, mediaIpfs, mediaType, name, tokenID, mintStatus, id, category, mintedWalletAddress, salePrice, mintedWalletType }) => {

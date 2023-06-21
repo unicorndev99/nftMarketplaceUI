@@ -57,14 +57,14 @@ export default function Table({ data, num, header, setInfoInModal }) {
             dbData.map((field,index) => {
             return (
                 <tr key={index}>
-                    {header.map((i) => {
+                    {header.map((i, headerIndex) => {
                         if (i.field === 'update_button') {
-                            return (<td className="cursor-pointer"><Link to={{ pathname: field[i.field], nftInfo: field}}><i className="fa fa-edit edit_button"></i></Link></td>)
+                            return (<td className="cursor-pointer" key={headerIndex}><Link to={{ pathname: field[i.field], nftInfo: field}}><i className="fa fa-edit edit_button"></i></Link></td>)
                         } else if (i.field === 'sale_button') {
-                            return (<td className="cursor-pointer"><Link to={{ pathname: field[i.field], nftInfo: field}}><i className="fa fa-tag edit_button"></i></Link></td>)
+                            return (<td className="cursor-pointer" key={headerIndex}><Link to={{ pathname: field[i.field], nftInfo: field}}><i className="fa fa-tag edit_button"></i></Link></td>)
                         } else if (i.field === 'content') {
                             return (
-                                <td className="cursor-pointer">
+                                <td className="cursor-pointer" key={headerIndex}>
                                     <div className="d-flex justify-content-center"  data-toggle="modal" data-target={'#' + field['content_modal']} onClick={() => setInfoToModal(field)}>
                                         {
                                             field['category'] === "Image" ? <img src={field[i.field]} alt="" className="content_img"/>
@@ -76,56 +76,56 @@ export default function Table({ data, num, header, setInfoInModal }) {
                                 </td>
                             )
                         } else if (i.field === 'view_button') {
-                          return (<td><i  data-toggle="modal" data-target={'#' + field['content_modal']} onClick={() => setInfoToModal(field)} className="fa fa-edit edit_button"></i></td>)
+                          return (<td key={headerIndex}><i  data-toggle="modal" data-target={'#' + field['content_modal']} onClick={() => setInfoToModal(field)} className="fa fa-edit edit_button"></i></td>)
                         } else if (i.field === 'state') {
                             if (field[i.field] === 'minted') {
                                 return (
-                                    <td style={{color : 'green'}}>
+                                    <td style={{color : 'green'}} key={headerIndex}>
                                         {field[i.field]}
                                     </td>
                                 )
                             } else {
                                 return (
-                                    <td style={{color : '#064092'}}>
+                                    <td style={{color : '#064092'}} key={headerIndex}>
                                         {field[i.field]}
                                     </td>
                                 )
                             }
                         } else if (i.field === 'price') {
                             return (
-                                <td style={{color : '#064092'}}>
+                                <td style={{color : '#064092'}} key={headerIndex}>
                                     {field[i.field]}
                                 </td>
                             )
                         } else if (i.field === 'TxID') {
                             return (
-                                <td className="text_underLine">
+                                <td className="text_underLine" key={headerIndex}>
                                     {field[i.field]}
                                 </td>
                             )
                         } else if (i.field === 'type') {
                             if (field[i.field] === 'bought') {
                                 return (
-                                    <td style={{color : 'darkred'}}>
+                                    <td style={{color : 'darkred'}} key={headerIndex}>
                                         {title.boughtTitle}
                                     </td>
                                 )
                             } else if (field[i.field] === 'minted') {
                                 return (
-                                    <td style={{color : 'green'}}>
+                                    <td style={{color : 'green'}} key={headerIndex}>
                                         {title.mintedTitle}
                                     </td>
                                 )
                             } else {
                                 return (
-                                    <td style={{color : '#064092'}}>
+                                    <td style={{color : '#064092'}} key={headerIndex}>
                                         {title.soldTitle}
                                     </td>
                                 )
                             }
 
                         }  else {
-                            return (<td>{field[i.field]}</td>);
+                            return (<td key={headerIndex}>{field[i.field]}</td>);
                         }
                     })}
                 </tr>

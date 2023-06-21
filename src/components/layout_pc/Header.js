@@ -11,8 +11,10 @@ const Header = () => {
     const history = useHistory()
 
     const goto = (params) => {
-        if(!(wallet && connectedWalletType))
-        setCurrentPage("Login")
+        if(!(wallet && connectedWalletType)) setCurrentPage("Login")
+        else {
+            setCurrentPage(params)
+        }
     }
     const logout = () => {
         setWalletAddress(null);

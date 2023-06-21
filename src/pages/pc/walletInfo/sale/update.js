@@ -11,7 +11,6 @@ class SaleUpdate extends Component {
     constructor(props) {
         super(props);
         const nftInfo = props.location.nftInfo
-        console.log("saleUpdate", nftInfo)
         this.state = {
             category : nftInfo.categoryOfMintpage ? nftInfo.categoryOfMintpage : "category1",
             name : nftInfo.NFTName,

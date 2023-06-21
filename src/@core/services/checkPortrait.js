@@ -6,7 +6,6 @@ export const getPortrait = () => {
 
 export const savePortrait = value => {
     window.sessionStorage.setItem(CHECK_PORTRAIT, value);
-    console.log(value,'Mobilestatus Changes.')
 };
 
 export const destroyPortrait = () => {

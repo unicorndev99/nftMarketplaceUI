@@ -92,7 +92,7 @@ function App() {
     const [wallet, setWalletAddress] = useState(null);
     const [connectedWalletType, setConnectedWalletType] = useState(null);
     const [walletBalance, setWalletBalance] = useState(0);
-    const [globalSearch, setGlobalSearch] = useState(null);
+    const [globalSearch, setGlobalSearch] = useState("");
     const [notification, setNotification] = useState({
         status: null,
         title: null
@@ -113,7 +113,6 @@ function App() {
         setGlobalSearch
     };
     
-    console.log("mobile", isMobile)
     return (
             <div className="App">
                 <AppContext.Provider value={AppContextValues}>

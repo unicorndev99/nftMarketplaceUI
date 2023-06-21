@@ -10,7 +10,6 @@ class NFTHistoryDetail extends Component {
     constructor(props) {
         super(props);
         const nftInfo = props.location.nftInfo
-        console.log("nftINfo", nftInfo)
         this.state = {
             ...nftInfo,
             historyTableHeader : [
@@ -33,7 +32,6 @@ class NFTHistoryDetail extends Component {
                     seller : oldWalletAddress,
                     endTime : new Date(createdAt).getFullYear() + "." + new Date(createdAt).getMonth() + "." + new Date(createdAt).getDate() + " " + new Date(createdAt).getHours() + ":" + new Date(createdAt).getMinutes() + ":" + new Date(createdAt).getSeconds(),
                 }))
-                console.log("getDerivedStateFromProps hisotry", historyData)
                 
                 this.setState({
                     historyTableData : historyData

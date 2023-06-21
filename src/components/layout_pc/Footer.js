@@ -17,8 +17,8 @@ class Footer extends Component {
             <footer className="d-flex footer text-white pt-lg-5 pb-5">
                 <div className='col-md-4 mt-3'>
                     <div className="col-md-6 float-right">
-                        <p className='text-[18px] font-bold'>{title.MarketPlaceDescription}</p>
-                        <p className='mt-3'>{title.MarketPlaceDescription}</p>
+                        <p className='text-[18px] font-bold'>Marketplace</p>
+                        <p className='mt-3'>There are many NFTs..</p>
                     </div>
 
                 </div>

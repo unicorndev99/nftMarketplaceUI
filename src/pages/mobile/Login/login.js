@@ -30,7 +30,6 @@ const Login = () => {
                 window.open('https://chrome.google.com/webstore/detail/kaikas/jblndlipeogpafnldhgmapagcccfchpi?hl=en', '_blank')
             } else {
                 if (typeof window.klaytn !== 'undefined') {
-                    console.log("It's in-app browser");
                     const accounts = await window.klaytn.enable();
                     const balance = await getWalletBalance(accounts[0], walletType)
                     setConnectedWalletType(walletType)

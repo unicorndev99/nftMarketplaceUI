@@ -26,7 +26,6 @@ class GenerateUpdate extends Component {
         this.setState({
             name : e.target.value
         })
-        console.log("state", this.state)
     }
 
     onDescriptionChange = async (e) => {

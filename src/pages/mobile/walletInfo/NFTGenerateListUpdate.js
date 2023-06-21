@@ -9,7 +9,6 @@ class NFTGenerateListUpdate extends Component {
     static contextType = AppContext;
     constructor(props) {
         super(props);
-        console.log("mobilemintedUpdate", props)
         const nftInfo = props.location.nftInfo
         this.state = {
             category : nftInfo.categoryOfMintpage ? nftInfo.categoryOfMintpage : "category1",
@@ -28,7 +27,6 @@ class NFTGenerateListUpdate extends Component {
         this.setState({
             name : e.target.value
         })
-        console.log("state", this.state)
     }
 
     onDescriptionChange = async (e) => {

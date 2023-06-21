@@ -10,7 +10,6 @@ export default function Table({ data, num,header, state, search }) {
   const [totalItems, setTotalItems] = useState(0);
 
   const ITEMS_PER_PAGE = num;
-
   const dbData = useMemo(() => {
     let filterData = data;
     if(search) {
@@ -22,7 +21,6 @@ export default function Table({ data, num,header, state, search }) {
 
     //Sorting comments
     if (sorting.field) {
-      console.log("price", sorting.field)
       const reversed = sorting.order === "asc" ? 1 : -1;
       if(sorting.field === "price") {
         computedData = computedData.sort(
@@ -53,14 +51,19 @@ export default function Table({ data, num,header, state, search }) {
             dbData.map((field,index) => {
                 if (state === true) {
                     return (
+                      <>
                         <Link to={{ pathname: '/buylistDetail', nftInfo: field}} key={index} className="col-md-3 NftCard">
-                            <NftCard  image={field.image} name={field.name} price={field.price} date={field.date}/>
+                            <NftCard  image={field.image} name={field.name} price={field.price} date={field.date} mediaType={field.mediaType}/>
                         </Link>
+                        <Link to={{ pathname: '/buylistDetail', nftInfo: field}} key={index} className="col-md-3 NftCard">
+                            <NftCard  image={field.image} name={field.name} price={field.price} date={field.date} mediaType={field.mediaType}/>
+                        </Link>
+                      </>
                     );
                 } else {
                     return (
                         <div key={index} className="col-md-3 NftCard" data-toggle="modal" data-target="#LoginConfirm">
-                            <NftCard  image={field.image} name={field.name} price={field.price} date={field.date}/>
+                            <NftCard  image={field.image} name={field.name} price={field.price} date={field.date} mediaType={field.mediaType}/>
                         </div>
                     );
                 }

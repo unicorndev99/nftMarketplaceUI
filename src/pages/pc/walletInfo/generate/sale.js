@@ -52,7 +52,6 @@ class GenerateSale extends Component {
         })
         const { wallet, connectedWalletType, setNotification } = this.context;
         let resTx = await sellListNFT(this.state.NFTID, this.state.salePrice, wallet, connectedWalletType)
-        console.log("resTx", resTx)
         if(resTx) {
             sellRegisteNFT(this.state.dbID, this.state.salePrice).then(res => {
                 this.setState({
@@ -106,7 +105,7 @@ class GenerateSale extends Component {
                                 <div className="d-flex justify-content-center">
                                     <div className="pc-update-img">
                                         {
-                                            this.state.mediaType === "Image" && <img src={this.state.mediaIpfs} className="NFTupdateModalImg" alt=""/>
+                                            this.state.mediaType === "Image" && <img src={this.state.mediaIpfs} className="" alt=""/>
                                         }
                                         {
                                             this.state.mediaType === "Video" && <video controls> 
